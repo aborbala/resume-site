@@ -1,72 +1,73 @@
-// /src/languages.js
-
 export const translations = {
   // English Translations
   en: {
     title: "Anna Kiss | Full Stack Developer",
     objectives: "OBJECTIVES",
-    objectiveText:
-      "My journey started in geoinformation science, and over time I found my niche at the intersection of maps, data, and software. Today, I work as a full stack developer building geospatial applications that connect raw data to real human insights.",
+    objectiveText: "My journey started in geoinformation science, and over time I found my niche at the intersection of maps, data, and software. Today, I work as a full stack developer building geospatial applications that connect raw data to real human insights.",
     contacts: "Contacts",
     github: "github.com/username",
     website: "linkedIn",
     email: "kissannab@gmail.com",
     experience: "EXPERIENCE",
-    job1Title: "Geospatial Developer | Full Stack Developer",
-    job1Company: "Mapular (formerly Orbica Europe)",
-    job1Desc: [
-      "Built interactive web mapping applications using React, Mapbox, and Leaflet, creating easy-to-use geospatial experiences.",
-      "Designed and implemented scalable geospatial APIs in Python and Node.js, using Azure Functions for flexible serverless backends.",
-      "Set up automated ETL processes with FME and Apache Airflow.",
-      "Integrated third-party geospatial data for scalable applications and deployed solutions using Azure CI/CD pipelines and Docker.",
-      "Worked following Agile methods, participating in sprint planning, stand-ups, and iterative delivery of features.",
-    ],
-    job2Title:
-      "Student Research Assistant at Center for Innovation and Science on Building Greening",
-    job2Company: "Technichal University of Berlin",
-    job2Desc:
-      "Contributed to the extension of an existing QGIS plugin using Python, adding functionality to model plant evaporation in vertical greening systems and support sustainability research.",
-    job3Title: "Student Research Assistant at Chair of Landscape Economics",
-    job3Company: "Technichal University of Berlin",
-    job3Desc:
-      "Supported a research project by working on routing solutions, comparing APIs such as Google Maps and OSMnx, and using R for spatial data analysis.",
     education: "EDUCATION",
-    edu1Title: "Geodesy and Geoinformation Science MSc.",
-    edu1Desc: "blah",
-    edu1Institute: "Technical University of Berlin",
-    edu2Title: "Geography BSc.",
-    edu2Institute: "Eötvös Loránd Science University,Budapest",
-    edu2Desc: "blah",
     skills: "Skills",
-    // Programming & Frameworks
-    skill_python: "Python",
-    skill_js: "JavaScript",
-    skill_ts: "TypeScript",
-    skill_react: "React",
-    skill_r: "R",
-    skill_html: "HTML5",
-    skill_css: "CSS3",
-    // Databases
-    skill_postgres: "PostgreSQL",
-    skill_postgis: "PostGIS",
-    // Cloud & DevOps
-    skill_azure: "Microsoft Azure",
-    skill_aws: "Amazon Web Services (AWS)",
-    skill_docker: "Docker",
-    skill_git: "Git & GitHub",
-    skill_airflow: "Apache Airflow",
-    // Geospatial Technologies
-    skill_esri: "Esri Suite (ArcGIS Pro)",
-    skill_qgis: "QGIS",
-    skill_gdal: "GDAL/OGR",
-    skill_mapbox: "Mapbox GL JS",
-    skill_leaflet: "Leaflet.js",
-    skill_fme: "FME Desktop",
     languages: "Languages",
     lang1: "German: C1",
     lang2: "English: C1",
     lang3: "Hungarian: native",
     resumeFilename: "Anna_Kiss_Resume_EN",
+    
+    jobs: [
+      {
+        key: "job1",
+        date: "07.2020 - Present",
+        title: "Geospatial Developer | Full Stack Developer",
+        company: "Mapular (formerly Orbica Europe)",
+        desc: [
+          "Built interactive web mapping applications using React, Mapbox, and Leaflet, creating easy-to-use geospatial experiences.",
+          "Designed and implemented scalable geospatial APIs in Python and Node.js, using Azure Functions for flexible serverless backends.",
+          "Set up automated ETL processes with FME and Apache Airflow.",
+          "Integrated third-party geospatial data for scalable applications and deployed solutions using Azure CI/CD pipelines and Docker.",
+          "Worked following Agile methods, participating in sprint planning, stand-ups, and iterative delivery of features.",
+        ]
+      },
+      {
+        key: "job2",
+        date: "10.2019 - 03.2020",
+        title: "Student Research Assistant at Center for Innovation and Science on Building Greening",
+        company: "Technichal University of Berlin",
+        desc: [
+          "Contributed to the extension of an existing QGIS plugin using Python, adding functionality to model plant evaporation in vertical greening systems and support sustainability research."
+        ]
+      },
+      {
+        key: "job3",
+        date: "05.2018 - 12.2018",
+        title: "Student Research Assistant at Chair of Landscape Economics",
+        company: "Technichal University of Berlin",
+        desc: [
+          "Supported a research project by working on routing solutions, comparing APIs such as Google Maps and OSMnx, and using R for spatial data analysis."
+        ]
+      }
+    ],
+
+    schools: [
+        {
+            key: "edu1",
+            date: "2017-2020",
+            title: "Geodesy and Geoinformation Science MSc.",
+            institute: "Technical University of Berlin",
+            desc: "Specialization in geospatial data science and web development."
+        },
+        {
+            key: "edu2",
+            date: "2009-2013",
+            title: "Geography BSc.",
+            institute: "Eötvös Loránd Science University, Budapest",
+            desc: "Focus on GIS and cartography."
+        }
+    ],
+
     skill_group_1_title: "Programming & Web",
     skill_group_1_list: "Python, JavaScript, TypeScript, React, R, HTML5, CSS3",
     skill_group_2_title: "Databases",
@@ -78,36 +79,80 @@ export const translations = {
   },
   // German Translations
   de: {
-    title: "Anna Kiss | Designer Lebenslauf",
+    title: "Anna Kiss | Full Stack Entwicklerin",
     objectives: "ZIELE",
-    objectiveText:
-      "[Fügen Sie hier den deutschen Zieltext ein. Erfahrener Designer mit einer Leidenschaft für die Schaffung intuitiver und schöner Benutzererlebnisse...]",
+    objectiveText: "Meine Reise begann in der Geoinformationswissenschaft, und mit der Zeit fand ich meine Nische an der Schnittstelle von Karten, Daten und Software. Heute arbeite ich als Full-Stack-Entwicklerin und erstelle geospatiale Anwendungen, die Rohdaten mit echten menschlichen Erkenntnissen verbinden.",
     contacts: "KONTAKT",
     github: "github.com/username",
-    website: "username.com",
-    email: "username@email.com",
+    website: "linkedIn",
+    email: "kissannab@gmail.com",
     experience: "ERFAHRUNG",
-    job1Title: "mapular UG",
-    job1Desc:
-      "[Fügen Sie hier die deutsche Beschreibung für Job 1 ein. Erfahrung im Design von Android- und iOS-Apps...]",
-    job2Title: "Firmenname",
-    job2Desc: "[Fügen Sie hier die deutsche Beschreibung für Job 2 ein...]",
-    job3Title: "Firmenname",
-    job3Desc: "[Fügen Sie hier die deutsche Beschreibung für Job 3 ein...]",
     education: "AUSBILDUNG",
-    edu1Title: "Idaho State University",
-    edu1Desc: "Wirtschaftsinformatik",
     skills: "FÄHIGKEITEN",
-    skill1: "React Native",
-    skill2: "Figma",
-    skill3: "HTML & CSS",
-    skill4: "Adobe XD",
-    skill5: "Wireframing",
-    skill6: "Benutzerforschung",
     languages: "SPRACHEN",
     lang1: "Deutsch: C1",
     lang2: "Englisch: C1",
     lang3: "Ungarisch: Muttersprache",
     resumeFilename: "Anna_Kiss_Lebenslauf_DE",
-  },
+
+    jobs: [
+      {
+        key: "job1",
+        date: "07.2020 - Heute",
+        title: "Geospatial Entwicklerin | Full Stack Entwicklerin",
+        company: "Mapular (ehemals Orbica Europe)",
+        desc: [
+          "Erstellung interaktiver Web-Mapping-Anwendungen mit React, Mapbox und Leaflet zur Schaffung benutzerfreundlicher geospatiale Erlebnisse.",
+          "Entwurf und Implementierung skalierbarer Geospatial-APIs in Python und Node.js unter Verwendung von Azure Functions für flexible serverlose Backends.",
+          "Einrichtung automatisierter ETL-Prozesse mit FME und Apache Airflow.",
+          "Integration von Geodaten Dritter für skalierbare Anwendungen und Bereitstellung von Lösungen mittels Azure CI/CD-Pipelines und Docker.",
+          "Arbeit nach agilen Methoden, Teilnahme an Sprint-Planungen, Stand-ups und iterativer Bereitstellung von Features."
+        ]
+      },
+      {
+        key: "job2",
+        date: "10.2019 - 03.2020",
+        title: "Studentische Hilfskraft am Zentrum für Innovations- und Wissensmanagement für Bauwerksbegrünung",
+        company: "Technische Universität Berlin",
+        desc: [
+          "Mitarbeit an der Erweiterung eines bestehenden QGIS-Plugins mit Python, um die Funktionalität zur Modellierung der Pflanzenverdunstung in vertikalen Begrünungssystemen zu erweitern und die Nachhaltigkeitsforschung zu unterstützen."
+        ]
+      },
+      {
+        key: "job3",
+        date: "05.2018 - 12.2018",
+        title: "Studentische Hilfskraft am Lehrstuhl für Landschaftsökonomie",
+        company: "Technische Universität Berlin",
+        desc: [
+          "Unterstützung eines Forschungsprojekts durch die Arbeit an Routing-Lösungen, den Vergleich von APIs wie Google Maps und OSMnx sowie die Nutzung von R für die räumliche Datenanalyse."
+        ]
+      }
+    ],
+
+    schools: [
+        {
+            key: "edu1",
+            date: "2017-2020",
+            title: "Geodäsie und Geoinformationswissenschaft MSc.",
+            institute: "Technische Universität Berlin",
+            desc: "Spezialisierung auf Geospatial Data Science und Webentwicklung."
+        },
+        {
+            key: "edu2",
+            date: "2009-2013",
+            title: "Geographie BSc.",
+            institute: "Eötvös-Loránd-Universität, Budapest",
+            desc: "Schwerpunkt auf GIS und Kartographie."
+        }
+    ],
+
+    skill_group_1_title: "Programmierung & Web",
+    skill_group_1_list: "Python, JavaScript, TypeScript, React, R, HTML5, CSS3",
+    skill_group_2_title: "Datenbanken",
+    skill_group_2_list: "PostgreSQL, PostGIS",
+    skill_group_3_title: "Cloud & DevOps",
+    skill_group_3_list: "Azure, AWS, Docker, Git, Apache Airflow",
+    skill_group_4_title: "Geospatial Tech",
+    skill_group_4_list: "Esri Suite, QGIS, GDAL/OGR, Mapbox, Leaflet, FME",
+  }
 };

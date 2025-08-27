@@ -1,6 +1,5 @@
-// /src/i18n.js
-
 import { translations } from './languages.js';
+import { renderContent } from './renderer.js'; // Import the new renderer
 
 let currentLanguage = 'en'; // Default language
 
@@ -9,25 +8,26 @@ function setLanguage(lang) {
   currentLanguage = lang;
   document.documentElement.lang = lang; // Update the lang attribute on the <html> tag
 
-  const elements = document.querySelectorAll('[data-i18n-key]');
-elements.forEach(element => {
-    const key = element.getAttribute('data-i18n-key');
-    const translation = translations[lang]?.[key];
+  const langData = translations[lang];
+  if (!langData) {
+    console.error(`Translations for language "${lang}" not found.`);
+    return;
+  }
 
-    if (translation) {
-      // --- NEW LOGIC HERE ---
-      // If the translation is an array, build a list
-      if (Array.isArray(translation)) {
-        const listHtml = `<ul>${translation.map(item => `<li>${item}</li>`).join('')}</ul>`;
-        element.innerHTML = listHtml;
-      } else {
-        // Otherwise, just set the text like before
-        element.innerHTML = translation;
-      }
+  // 1. Handle simple text elements that are not part of the renderer
+  const elements = document.querySelectorAll('[data-i18n-key]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n-key');
+    // Check if the translation exists and it's a simple string (not an array/object)
+    if (langData[key] && typeof langData[key] === 'string') {
+      element.innerHTML = langData[key];
     }
   });
 
-  // Update active button style
+  // 2. Render the complex, repetitive sections using the dedicated renderer
+  renderContent(langData);
+
+  // 3. Update active button style
   document.getElementById('lang-en').classList.toggle('active', lang === 'en');
   document.getElementById('lang-de').classList.toggle('active', lang === 'de');
 }
@@ -37,8 +37,10 @@ export function initLanguageSwitcher() {
   const enButton = document.getElementById('lang-en');
   const deButton = document.getElementById('lang-de');
 
-  enButton.addEventListener('click', () => setLanguage('en'));
-  deButton.addEventListener('click', () => setLanguage('de'));
+  if (enButton && deButton) {
+    enButton.addEventListener('click', () => setLanguage('en'));
+    deButton.addEventListener('click', () => setLanguage('de'));
+  }
 
   // Set the initial language on page load
   setLanguage(currentLanguage);
@@ -49,7 +51,7 @@ export function getCurrentLanguage() {
     return currentLanguage;
 }
 
-// This function gets the appropriate filename
+// This function gets the appropriate filename for the PDF
 export function getResumeFilename() {
-    return translations[currentLanguage].resumeFilename || 'Resume';
+    return translations[currentLanguage]?.resumeFilename || 'Resume';
 }
