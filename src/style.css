@@ -1,0 +1,301 @@
+/* ===================================================================
+ * CSS VARIABLES & FONT SETUP
+ * ===================================================================
+ */
+
+/* This rule loads your local font files. */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/fonts/merriweather.woff2') format('woff2'),
+       url('/fonts/merriweather.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+    --font-family-lato: 'Lato', sans-serif;
+    --font-family-merriweather: 'Merriweather', serif;
+    --font-family-inter: 'Inter', sans-serif;
+    --text-black: rgba(0, 0, 0, 1);
+    --text-rgb-16-16-16: rgba(16, 16, 16, 1);
+}
+
+/* ===================================================================
+ * CSS RESET & ROOT FONT SIZING
+ * ===================================================================
+ */
+
+/* --- THIS IS THE KEY --- */
+/* Set the base font size for the entire document. 
+   Change this one value to scale all text up or down. 
+   100% is typically 16px in most browsers.
+*/
+html {
+    font-size: 100%; /* Base = 16px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-lato);
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    color: var(--text-rgb-16-16-16);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===================================================================
+ * MAIN RESUME CONTAINER & BACKGROUND STYLES
+ * ===================================================================
+ */
+.resume-page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    background-color: white;
+    padding: 20mm;
+    box-sizing: border-box;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-page .name-columns-21 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-page .three-column-layout {
+    flex-grow: 1;
+}
+
+.name-columns-21 {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===================================================================
+ * LAYOUT & TYPOGRAPHY (USING REM UNITS)
+ * ===================================================================
+ */
+.three-column-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.column-1 {
+    flex: 1;
+    min-width: 200px;
+}
+
+.column-2 {
+    flex: 2;
+}
+
+.name-header {
+    font-family: var(--font-family-lato);
+    font-weight: 300;
+    font-size: 2.625rem; /* Formerly 40px */
+    letter-spacing: 1.0625rem; /* Formerly 17px */
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.headline .separator {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--text-black);
+}
+
+.headline .section-title {
+    font-family: var(--font-family-lato);
+    font-size: 0.625rem; /* Formerly 9px */
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Objective & Contacts */
+.objective-text, .contact-item {
+    font-family: var(--font-family-lato);
+    font-size: 0.75rem; /* Formerly 11px */
+    line-height: 1.6;
+}
+
+.contacts-102 .contact-item {
+    margin-bottom: 8px;
+}
+
+/* Experience & Education */
+.date {
+    font-family: var(--font-family-inter);
+    font-size: 0.625rem; /* Formerly 9px */
+    text-transform: capitalize;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.job-title {
+    font-family: var(--font-family-merriweather);
+    font-weight: 500;
+    font-size: 0.9375rem; /* Formerly 14px */
+    margin-bottom: 0px;
+}
+
+.company-name {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8125rem; /* Formerly 12px */
+    color: #6c757d;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.job-description {
+    font-family: var(--font-family-lato);
+    font-size: 0.75rem; /* Formerly 11px */
+    line-height: 1.6;
+}
+
+/* Skills & Languages */
+.language-item {
+    font-family: var(--font-family-lato);
+    font-size: 0.75rem; /* Formerly 11px */
+    line-height: 1.5;
+}
+
+.skill-group-title {
+    font-family: var(--font-family-merriweather);
+    font-weight: 500;
+    font-size: 0.9375rem; /* Formerly 14px */
+}
+
+.skill-group-list {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75rem; /* Formerly 11px */
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.skill-group-list > div:not(:last-child) {  margin-bottom: 24px; }
+
+
+.experience-list > div:not(:last-child) {     margin-bottom: 24px; }
+
+/* ===================================================================
+ * QR CODE & BUTTONS (UNCHANGED SECTIONS)
+ * ===================================================================
+ */
+
+/* Styling for the QR code image */
+.qr-code-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 8px;
+    display: block;
+}
+
+/* STYLISH DOWNLOAD BUTTON */
+#download-pdf-btn {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+    transition: all 0.2s ease-in-out;
+}
+
+#download-pdf-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+#download-pdf-btn svg {
+    width: 28px;
+    height: 28px;
+    stroke: #333;
+    stroke-width: 2;
+}
+
+/* LANGUAGE SWITCHER */
+.language-switcher {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    z-index: 1000;
+    display: flex;
+    gap: 8px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.language-switcher button {
+    border: none;
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem; /* Formerly 14px */
+    cursor: pointer;
+    color: #888;
+    transition: all 0.2s ease-in-out;
+}
+
+.language-switcher button:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.language-switcher button.active {
+    background-color: #333;
+    color: white;
+}

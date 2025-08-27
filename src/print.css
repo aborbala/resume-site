@@ -1,0 +1,50 @@
+/* /src/print.css */
+
+/* This hides elements we don't want in the PDF, like the download button. */
+@media print {
+  #download-pdf-btn, body > script {
+    display: none !important;
+  }
+
+  /* Reset body styles for printing */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Ensure a white background */
+  }
+
+  /* --- THIS IS THE KEY PART --- */
+  /* Force the resume container to behave like an A4 page. */
+  .name-cv-2 {
+    /* Set explicit A4 dimensions */
+    width: 210mm;
+    min-height: 297mm; /* Use min-height to allow for longer content */
+    
+    /* Remove any screen-specific styling that might interfere */
+    margin: 0 auto; /* Center the page if needed, though usually 0 is fine */
+    padding: 15mm; /* Add some margin inside the page */
+    box-shadow: none; /* Remove shadows for printing */
+    border-radius: 0; /* Remove rounded corners */
+    
+    /* Ensure the padding is included in the width/height calculation */
+    box-sizing: border-box; 
+    
+    /* Ensure background graphics are printed */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* You might need to adjust font sizes for print */
+  .name-cv-2 {
+    font-size: 10pt;
+  }
+  
+  .name-header {
+      font-size: 32pt;
+  }
+
+  /* Ensure background shapes are visible if you want them in the PDF */
+  .bg-shapes, .grain-overlay {
+    display: block;
+  }
+}
