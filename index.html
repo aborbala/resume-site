@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/resume-site/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n-key="title">Anna Kiss | Full Stack Dev Resume</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:wght@300;400;700&family=Merriweather&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script type="module" crossorigin src="/resume-site/assets/index-BtbBQgJ2.js"></script>
+  <link rel="stylesheet" crossorigin href="/resume-site/assets/index-DBTbveI1.css">
+</head>
+
+<body>
+
+  <button id="download-pdf-btn" title="Download as PDF">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  </button>
+
+  <div class="language-switcher">
+    <button id="lang-en" class="active">EN</button>
+    <button id="lang-de">DE</button>
+  </div>
+
+  <div class="resume-page" id="resume-content">
+    <div class="bg-shapes">
+      <div class="bg-shape-1"></div>
+      <div class="bg-shape-2"></div>
+      <div class="bg-shape-3"></div>
+    </div>
+    <div class="grain-overlay"></div>
+
+    <div class="name-columns-21">
+      <h1 class="name-header">ANNA KISS</h1>
+
+      <div class="three-column-layout">
+        <div class="column-1">
+          <section class="objective-96">
+            <div class="headline">
+              <p class="section-title" data-i18n-key="objectives"></p>
+              <div class="separator"></div>
+            </div>
+            <p class="objective-text" data-i18n-key="objectiveText">
+            </p>
+          </section>
+
+          <section class="contacts-102">
+            <div class="headline">
+              <p class="section-title" data-i18n-key="contacts"></p>
+              <div class="separator"></div>
+            </div>
+            <p class="contact-item"><a href="mailto:username@email.com" data-i18n-key="email"></a></p>
+            <p class="contact-item">+49 151 15950160</p>
+            <img src="images/qr-code.png" alt="QR Code to Portfolio" class="qr-code-img">
+          </section>
+          
+          <section class="skills-56">
+            <div class="headline">
+              <p class="section-title" data-i18n-key="skills"></p>
+              <div class="separator"></div>
+            </div>
+            <div class="skills-grouped-container">
+              <div class="skill-group">
+                <p class="skill-group-title" data-i18n-key="skill_group_1_title"></p>
+                <p class="skill-group-list" data-i18n-key="skill_group_1_list"></p>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group-title" data-i18n-key="skill_group_2_title"></p>
+                <p class="skill-group-list" data-i18n-key="skill_group_2_list"></p>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group-title" data-i18n-key="skill_group_3_title"></p>
+                <p class="skill-group-list" data-i18n-key="skill_group_3_list"></p>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group-title" data-i18n-key="skill_group_4_title"></p>
+                <p class="skill-group-list" data-i18n-key="skill_group_4_list"></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="languages-77">
+            <div class="headline">
+              <p class="section-title" data-i18n-key="languages"></p>
+              <div class="separator"></div>
+            </div>
+            <div class="languages-83">
+              <p class="language-item" data-i18n-key="lang1"></p>
+              <p class="language-item" data-i18n-key="lang2"></p>
+              <p class="language-item" data-i18n-key="lang3"></p>
+            </div>
+          </section>
+        </div>
+
+        <div class="column-2">
+          <!-- EXPERIENCE SECTION (NOW SIMPLIFIED) -->
+          <section class="experience-25">
+              <div class="headline">
+                  <p class="section-title" data-i18n-key="experience"></p>
+                  <div class="separator"></div>
+              </div>
+              <!-- This container will be filled by JavaScript -->
+              <div id="experience-list" class="experience-list"></div>
+          </section>
+
+          <!-- EDUCATION SECTION (NOW SIMPLIFIED) -->
+          <section class="education-46">
+              <div class="headline">
+                  <p class="section-title" data-i18n-key="education"></p>
+                  <div class="separator"></div>
+              </div>
+              <!-- This container will be filled by JavaScript -->
+              <div id="education-list" class="experience-list"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
